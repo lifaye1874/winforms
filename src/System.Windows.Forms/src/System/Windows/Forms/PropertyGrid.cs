@@ -5289,6 +5289,12 @@ namespace System.Windows.Forms
             largeButtonSize = LogicalToDeviceUnits(DEFAULT_LARGE_BUTTON_SIZE);
             cyDivider = LogicalToDeviceUnits(CYDIVIDER);
             toolStripButtonPaddingY = LogicalToDeviceUnits(TOOLSTRIP_BUTTON_PADDING_Y);
+
+            if (hotcommands != null && hotcommands.Visible) {
+                // Require a fontchange notification
+                this.Controls.Remove(hotcommands);
+                this.Controls.Add(hotcommands);
+            }
         }
 
         /// <summary>
