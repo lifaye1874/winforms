@@ -380,7 +380,7 @@ namespace System.Windows.Forms
         ///  Sets the HighDpi mode for process.
         /// </summary>
         /// <param name="highDpiMode">The HighDpi mode to set.</param>
-        /// <returns></returns>
+        /// <returns><see langword="true"/> if HighDpi mode was set; otherwise <see langword="false"/>.</returns>
         public static bool SetHighDpiMode(HighDpiMode highDpiMode)
         {
             if (DpiHelper.FirstParkingWindowCreated)
@@ -668,6 +668,9 @@ namespace System.Windows.Forms
             }
         }
 
+        /// <summary>
+        /// Gets whethers visual styles are enabled for the application.
+        /// </summary>
         public static bool UseVisualStyles { get; private set; } = false;
 
         /// <remarks>
